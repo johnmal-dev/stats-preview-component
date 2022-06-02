@@ -1,0 +1,151 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+$inter: 'Inter', sans-serif;
+$lexend: 'Lexend Deca', sans-serif;
+
+// Primary
+$main-bg: hsl(233, 47%, 7%);
+$card-bg: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$main-p: hsla(0, 0%, 100%, 0.75);
+$stats-headings: hsla(0, 0%, 100%, 0.6);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $white;
+  font-family: $inter;
+  font-size: 15px;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-family: $inter;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  font-family: $inter;
+}
+
+body {
+  background: $main-bg;
+}
+
+.card {
+  background: $card-bg;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container {
+  order: 1;
+  width: 100%;
+  height: 240px;
+  // overflow: hidden;
+  background-image: linear-gradient(
+      rgba(119, 65, 152, 0.5),
+      rgba(119, 65, 152, 0.5)
+    ),
+    url('../images/image-header-mobile.jpg');
+  background-size: cover;
+
+  img {
+    // display: none;
+    width: 100%;
+  }
+}
+
+.text-container {
+  order: 2;
+  text-align: center;
+  padding: 2.5rem 1.4rem;
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.55rem;
+    color: $main-p;
+    font-size: 1rem;
+  }
+}
+
+.stats-container {
+  margin: 1rem 0 1rem 0;
+  text-transform: uppercase;
+
+  .stat {
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: $lexend;
+    color: $stats-headings;
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 2.25rem;
+    font-family: $inter;
+  }
+
+  .card {
+    flex-direction: row;
+    width: auto;
+    max-width: 1115px;
+    height: 450px;
+    margin: 3rem;
+  }
+  .image-container {
+    order: 2;
+    height: 100%;
+    width: 50%;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      // width: auto;
+    }
+  }
+  .text-container {
+    order: 1;
+    padding: 4.5rem;
+    padding-right: 5rem;
+    text-align: left;
+    width: 50%;
+
+    p {
+      margin-top: 2rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .stats-container {
+    margin: 1rem 2rem 1rem 0;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+}
